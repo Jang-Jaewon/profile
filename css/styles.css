@@ -19,7 +19,19 @@ a{
     align-items: center;
     justify-content: center;
 }
-
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
 /* main section */
 #main{
     background-image: url(/profile/img/bg1.jpeg);
@@ -99,9 +111,81 @@ a{
 #main .cta:hover{
     color: white;
     background-color: var(--main-font-color);
-
 }
 /* End main section */
+
+/* Profile Section */
+#profile .profile{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#profile .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#profile .section-title span{
+    color: var(--main-font-color);
+}
+#profile .profile-top p{
+    padding: 0 80px;
+}
+#profile .profile-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#profile .profile-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(/profile/img/bg2.jpeg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#profile .profile-item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: .8;
+    z-index: -1;
+}
+#profile .profile-bottom .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#profile .profile-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#profile .profile-item p{
+    color: white;
+    text-align: left;
+}
+/* End Profile Section */
 
 /* keyframes */
 @keyframes text_reveal_box{
