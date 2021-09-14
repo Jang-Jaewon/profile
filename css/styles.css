@@ -61,6 +61,14 @@ p{
     color: white;
     background-color: var(--main-font-color);
 }
+.name h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+.name h1 span{
+    color: var(--main-font-color);
+}
 /* main section */
 #main{
     background-image: url(/profile/img/bg1.jpeg);
@@ -352,6 +360,47 @@ p{
     font-weight: 500;
 }
 /* End Contact Section */
+
+/* Footer */
+#footer{
+    background-image: var(--bkg-gradient);
+
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 10px;
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 5px 10px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+}
+/* End Footer */
 
 /* keyframes */
 @keyframes text_reveal_box{
