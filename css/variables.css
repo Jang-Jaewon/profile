@@ -1,3 +1,4 @@
 :root {
     --main-font-color: #00bfa5;
+    --bkg-gradient : linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
