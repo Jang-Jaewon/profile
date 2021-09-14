@@ -44,6 +44,23 @@ p{
 .section-title span{
     color: var(--main-font-color);
 }
+.button{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid var(--main-font-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transform: .3s ease;
+    transition-property: background-color, color;
+}
+.button:hover{
+    color: white;
+    background-color: var(--main-font-color);
+}
 /* main section */
 #main{
     background-image: url(/profile/img/bg1.jpeg);
@@ -106,23 +123,6 @@ p{
 }
 #main h1:nth-child(3) span{
     animation-delay: 2.5s;
-}
-#main .cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid var(--main-font-color);
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 30px;
-    transform: .3s ease;
-    transition-property: background-color, color;
-}
-#main .cta:hover{
-    color: white;
-    background-color: var(--main-font-color);
 }
 /* End main section */
 
@@ -260,6 +260,54 @@ p{
     transform: scale(1.2);
 }
 /* End Projects Section */
+
+/* About Section */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left{
+    width: 250px;
+    height: 360px;
+}
+#about .col-right{
+    width: 100%;
+}
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+}
+#about .col-right .button{
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#about .col-left .about-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+#about .col-left .about-img::after{
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 90%;
+    border: 7px solid var(--main-font-color);
+    z-index: -1;
+}
+/* End About Section */
 
 /* keyframes */
 @keyframes text_reveal_box{
