@@ -142,6 +142,10 @@ p{
     margin: 0 auto;
     padding: 100px 0;
 }
+#profile .profile-top {
+	max-width: 500px;
+	max-width: 0 auto;
+}
 #profile .profile-top p{
     padding: 0 80px;
 }
@@ -175,7 +179,7 @@ p{
     height: 100%;
     width: 100%;
     background-image: var(--bkg-gradient);
-    opacity: .8;
+    opacity: .9;
     z-index: -1;
 }
 #profile .profile-bottom .icon{
@@ -196,76 +200,75 @@ p{
 /* End Profile Section */
 
 /* Projects Section */
-#projects .projects{
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 0;
+#projects .projects {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
 }
-#projects .projects-header h1{
- margin-bottom: 50px;
+#projects .projects-header h1 {
+	margin-bottom: 50px;
 }
-#projects .all-projects{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+#projects .all-projects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
-#projects .project-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
+#projects .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
 }
-#projects .project-info{
-    padding: 30px;
-    flex-basis: 50%;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    background-image: var(--bkg-gradient);
-    color:white
+#projects .project-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: var(--liner-gradient);
+	color: white;
 }
-#projects .project-info h1{
-    font-size: 4rem;
-    font-weight: 500;
+#projects .project-info h1 {
+	font-size: 4rem;
+	font-weight: 500;
 }
-#projects .project-info h2{
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-top: 10px;
+#projects .project-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
 }
-#projects .project-info p{
-    color: white;
+#projects .project-info p {
+	color: white;
 }
-#projects .project-img{
-    flex-basis: 50%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
+#projects .project-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
 }
-#projects .project-img:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-image: var(--bkg-gradient);
-    opacity: .7;
+#projects .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: var(--liner-gradient);
+	opacity: 0.7;
 }
-#projects .project-img img{
-    transition: .3s ease transform;
+#projects .project-img img {
+	transition: 0.3s ease transform;
 }
-#projects .project-item:hover .project-img img{
-    transform: scale(1.2);
+#projects .project-item:hover .project-img img {
+	transform: scale(1.1);
 }
 /* End Projects Section */
 
@@ -289,6 +292,7 @@ p{
     font-weight: 500;
     letter-spacing: .2rem;
     margin-bottom: 10px;
+    color: #00675b;
 }
 #about .col-right p{
     margin-bottom: 20px;
@@ -311,7 +315,7 @@ p{
     left: -33px;
     top: 19px;
     height: 98%;
-    width: 90%;
+    width: 98%;
     border: 7px solid var(--main-font-color);
     z-index: -1;
 }
@@ -322,6 +326,7 @@ p{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+    width: 90%;
 }
 #contact .contact-items{
     width: 400px;
@@ -425,3 +430,123 @@ p{
     }
 }
 /* End keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width:768px) {
+    .button{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }       
+    h1.section-title{
+        font-size: 6rem;
+    } 
+
+    /* Main Section */
+    #main h1{
+        font-size: 7rem;
+    }
+    /* End Main Section */
+
+    /* Profile Section */
+    #profile .profile-top{
+        max-width: 700px;
+    }
+    #profile .profile-bottom .profile-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    /* End Profile Section */
+
+    /* Projects Section */
+    #projects .project-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    #projects .project-item{
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+    #projects .all-projects .project-img{
+        height: 100%;
+    }
+    /* End Projects Section */
+    
+    /* About Section */
+    #about .about{
+        flex-direction: row;
+    }
+    #about .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    #about .about .col-left .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid var(--main-font-color);
+    }
+    #about .col-right{
+        text-align: left;
+        padding: 30px;
+    }
+    #about .col-right h1{
+        text-align: left;
+    }
+    /* End About Section */
+
+    /* Contact Section */
+    #contact .contact{
+        flex-direction: column;
+        padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+    }
+    #contact .contact-items{
+        width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+    }
+    #contact .contact-item{
+        width: 30%;
+		margin: 0;
+		flex-direction: column;
+        justify-content:start;
+        align-items: center;
+    }
+    #contact .contact-item .icon{
+        height: 100px;
+        width: 100px;
+    }
+    #contact .contact-item .icon img{
+        object-fit: contain;
+    }
+    #contact .contact-item .contact-info{
+        width: 100%;
+    }
+    /* End Contact Section */
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width:1400px){
+    /* Profile Section */
+    #profile .profile-bottom .profile-item{
+        padding: 30px 15px;
+        justify-content:start;
+        min-height: 350px;
+        flex-basis: 23%;
+        margin: 1%;
+    }    
+    /* End Profile Section */
+}
+/* End Media Query For Desktop */
