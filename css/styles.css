@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 @import "variables.css";
 *{
     padding:0;
@@ -35,7 +35,7 @@ p{
 }
 .section-title{
     font-size: 4rem;
-    font-weight: 300;
+    font-weight: 500;
     color: black;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -60,7 +60,7 @@ p{
 }
 .button:hover{
     color: white;
-    background-color: var(--main-font-color);
+    background-color: var(--sub-font-color);
 }
 .name h1{
     font-size: 3rem;
@@ -420,7 +420,7 @@ p{
     font-weight: 500;
     letter-spacing: .2rem;
     margin-bottom: 10px;
-    color: #00675b;
+    color: var(--sub-font-color);
 }
 #about .col-right p{
     margin-bottom: 20px;
@@ -444,7 +444,7 @@ p{
     top: 19px;
     height: 98%;
     width: 98%;
-    border: 7px solid var(--main-font-color);
+    border: 7px solid var(--sub-font-color);
     z-index: -1;
 }
 /* End About Section */
@@ -534,6 +534,124 @@ p{
     font-size: 1.3rem;
 }
 /* End Footer */
+
+/* Chat Box */
+#chat-btn{
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+    height: 55px;
+    width: 55px;
+    background: var(--sub-font-color);
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#chat{
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 100px;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+#chat.active{
+    display: none;
+}
+#chat .head-text{
+    line-height: 60px;
+    padding: 0 20px;
+    color: white;
+    background: var(--sub-font-color);;
+    border-radius: 15px 15px 0 0;
+    font-size: 20px;
+}
+#chat .chat-box{
+    padding: 20px;
+    width: 100%;
+}
+#chat .desc-text{
+    color: var(--sub-font-color);
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+#chat form{
+    padding: 10px 15px;
+    margin: 20px 0;
+    border: 1px solid lightgrey;
+}
+#chat form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+#chat form .field:last-child{
+    margin-bottom: 15;
+}
+#chat form .field input,
+#chat form .field button,
+#chat form .textarea textarea{
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+#chat form .field input:focus,
+#chat form .textarea textarea:focus{
+    border-color: var(--main-font-color);
+}
+#chat form .field input::placeholder,
+#chat form .textarea textarea::placeholder{
+    color:silver;
+    transition: all 0.3s ease;
+}
+#chat .chat-box form textarea::placeholder{
+    padding-top: 24px;
+}
+#chat .chat-box form textarea:focus{
+    padding-top: 24px;
+}
+#chat form .field input:focus::placeholder,
+#chat form .textarea textarea:focus::placeholder{
+    color: lightgrey;
+}
+#chat .chat-box form .textarea{
+    height: 70px;
+    width: 100%;   
+}
+#chat .chat-box form .textarea textarea{
+    height: 100%;
+    border-radius: 10px;
+    resize: none;
+    padding-left: 15px 20px;
+    font-size: 16px;
+}
+#chat .chat-box form .field button{
+    border:none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--sub-font-color);
+    transition: all 0.3s ease;
+}
+#chat .chat-box form .field button:active{
+    transform: scale(0.97);
+}
+
+/* End Chat Box */
 
 /* keyframes */
 @keyframes hamberger_puls {
