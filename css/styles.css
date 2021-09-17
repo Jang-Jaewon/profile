@@ -52,7 +52,7 @@ p{
     background-color: transparent;
     border: 2px solid var(--main-font-color);
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: uppercase;å
     letter-spacing: .1rem;
     margin-top: 30px;
     transform: .3s ease;
@@ -60,7 +60,7 @@ p{
 }
 .button:hover{
     color: white;
-    background-color: var(--sub-font-color);
+    background-color: var(--main-font-color);
 }
 .name h1{
     font-size: 3rem;
@@ -70,7 +70,6 @@ p{
 .name h1 span{
     color: var(--main-font-color);
 }
-
 /* Header */
 #header{
     position: fixed;
@@ -262,70 +261,120 @@ p{
 }
 /* End main section */
 
-/* Profile Section */
-#profile .profile{
-    flex-direction: column;
+/* About Section */
+#about .about{
+    flex-direction: column-reverse;
     text-align: center;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px 20px;
 }
-#profile .profile-top {
-	max-width: 500px;
-	margin: 0 auto;
+#about .col-left{
+    width: 250px;
+    height: 360px;
 }
-#profile .profile-top p{
-    padding: 0 80px;
-}
-#profile .profile-bottom{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-#profile .profile-item{
-    flex-basis: 80%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px;
-    border-radius: 10px;
-    background-image: url(/profile/img/bg2.jpeg);
-    background-size: cover;
-    margin: 10px 5%;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-#profile .profile-item::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
+#about .col-right{
     width: 100%;
-    background-image: var(--bkg-gradient);
-    opacity: .9;
-    z-index: -1;
 }
-#profile .profile-bottom .icon{
-    height: 80px;
-    width: 80px;
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+    color: var(--sub-font-color);
+}
+#about .col-right p{
     margin-bottom: 20px;
 }
-#profile .profile-item h2{
+#about .col-right .button{
+    color: black;
+    margin-bottom: 50px;
+    padding: 10px 20px;
     font-size: 2rem;
-    color: white;
-    margin-bottom: 10px;
-    text-transform: uppercase;
 }
-#profile .profile-item p{
-    color: white;
-    text-align: left;
+#about .col-left .about-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
 }
-/* End Profile Section */
+#about .col-left .about-img::after{
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid var(--sub-font-color);
+    z-index: -1;
+}
+/* End About Section */
+
+/* Skills Section */
+#skills .skills{
+    flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#skills .skills_text{
+    margin-bottom: 50px;
+} 
+#skills .box{
+    display: flex;
+    flex-direction: column;
+}
+#skills .skills_img{
+    text-align: center;
+    margin-bottom: 50px;
+} 
+#skills .skills_img img{
+    opacity: 0.8;
+    border-radius: 15px;
+}
+#skills .skills_data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+}
+#skills .skills_icon{
+    font-size: 2rem;
+    margin-right: 20px;
+    color: var(--sub-font-color);
+}
+#skills .skills_names{
+    display: flex;
+    align-items: center;
+} 
+#skills .skills_bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-font-color);
+    height: .5rem;
+    border-radius: .5rem;
+    z-index: -1;
+}
+#skills .skills_html{
+    width: 51%;
+}
+#skills .skills_css{
+    width: 51%;
+}
+#skills .skills_js{
+    width: 51%;
+}
+#skills .skills_python{
+    width: 51%;
+}
+/* End Skills Section */
 
 /* Projects Section */
 #projects .projects {
@@ -399,55 +448,6 @@ p{
 	transform: scale(1.1);
 }
 /* End Projects Section */
-
-/* About Section */
-#about .about{
-    flex-direction: column-reverse;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 20px;
-}
-#about .col-left{
-    width: 250px;
-    height: 360px;
-}
-#about .col-right{
-    width: 100%;
-}
-#about .col-right h2{
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: .2rem;
-    margin-bottom: 10px;
-    color: var(--sub-font-color);
-}
-#about .col-right p{
-    margin-bottom: 20px;
-}
-#about .col-right .button{
-    color: black;
-    margin-bottom: 50px;
-    padding: 10px 20px;
-    font-size: 2rem;
-}
-#about .col-left .about-img{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 10px solid white;
-}
-#about .col-left .about-img::after{
-    content: "";
-    position: absolute;
-    left: -33px;
-    top: 19px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid var(--sub-font-color);
-    z-index: -1;
-}
-/* End About Section */
 
 /* Contact Section */
 #contact .contact{
@@ -703,35 +703,6 @@ p{
     }
     /* End Main Section */
 
-    /* Profile Section */
-    #profile .profile-top{
-        max-width: 700px;
-    }
-    #profile .profile-bottom .profile-item{
-        flex-basis: 45%;
-        margin: 2.5%;
-    }
-    /* End Profile Section */
-
-    /* Projects Section */
-    #projects .project-item:nth-child(even){
-        flex-direction: row-reverse;
-    }
-    #projects .project-item{
-        flex-direction: row;
-        height: 400px;
-        margin: 0;
-        width: 100%;
-        border-radius: 0;
-    }
-    #projects .all-projects .project-info{
-        height: 100%;
-    }
-    #projects .all-projects .project-img{
-        height: 100%;
-    }
-    /* End Projects Section */
-    
     /* About Section */
     #about .about{
         flex-direction: row;
@@ -757,6 +728,49 @@ p{
     }
     /* End About Section */
 
+    /* Skill Section */
+    #skills .skills_box{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    #skills .skills_text h1{
+        margin-bottom: 30px;
+    }
+    #skills .skills_img{
+        width: 50%;
+        margin-bottom: 0;
+        border-bottom: 20px;
+    }
+    #skills .skills_container{
+        width: 50%;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+    }
+    /* End Skill Section */
+
+    /* Projects Section */
+    #projects .project-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    #projects .project-item{
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #projects .all-projects .project-info{
+        height: 100%;
+    }
+    #projects .all-projects .project-img{
+        height: 100%;
+    }
+    /* End Projects Section */
+    
     /* Contact Section */
     #contact .contact{
         flex-direction: column;
@@ -816,15 +830,5 @@ p{
         display: none;
     }
     /* End Header Section */
-
-    /* Profile Section */
-    #profile .profile-bottom .profile-item{
-        padding: 30px 15px;
-        justify-content:start;
-        min-height: 350px;
-        flex-basis: 23%;
-        margin: 1%;
-    }    
-    /* End Profile Section */
 }
 /* End Media Query For Desktop */
