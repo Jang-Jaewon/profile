@@ -4,6 +4,9 @@ const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul a');
 const header = document.querySelector('.header.container');
 const chtBtn = document.querySelector('#chat-btn');
 const chatBox = document.querySelector('#chat');
+const skill_box = document.querySelector('#skills .skills_box')
+const skill_bars = document.querySelectorAll('#skills .skills_bar')
+
 
 // hamburger toggle Btn
 hamburger.addEventListener('click', ()=>{
@@ -32,4 +35,11 @@ menu_item.forEach(item=>{
 // Chat toggle Btn
 chtBtn.addEventListener('click',()=>{
     chat.classList.toggle("active");
+})
+
+// Skills bar move
+skill_box.addEventListener('mouseover',()=>{
+    skill_bars.forEach(item=>{
+        item.classList.add('bar_active')
+    })
 })

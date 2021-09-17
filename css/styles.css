@@ -374,6 +374,10 @@ p{
 #skills .skills_python{
     width: 51%;
 }
+.bar_active{
+    animation: skill_growth 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
 /* End Skills Section */
 
 /* Projects Section */
@@ -685,6 +689,14 @@ p{
         font-weight: 500px;   
     }
 }
+@keyframes skill_growth{
+    from{
+        width: 0;
+    }
+    to{
+        width: 51%;
+    }
+}
 /* End keyframes */
 
 /* Media Query For Tablet */
@@ -696,6 +708,11 @@ p{
     h1.section-title{
         font-size: 6rem;
     } 
+    p{
+        color: black;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
 
     /* Main Section */
     #main h1{
@@ -748,7 +765,10 @@ p{
         margin-right: 50px;
         display: flex;
         flex-direction: column;
-        justify-content:space-evenly;
+        justify-content:space-around;
+    }
+    #skills .skills_data{
+        margin-bottom: 0;
     }
     /* End Skill Section */
 
