@@ -344,10 +344,25 @@ p{
     border-radius: 5px;
     box-shadow: 0px 0px 18px 0 #0000002c;
 }
-#skills .skills_icon{
+#skills .skills_icon_html{
     font-size: 2rem;
     margin-right: 20px;
-    color: var(--sub-font-color);
+    color: #FF5721;
+}
+#skills .skills_icon_css{
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #1671B7;
+}
+#skills .skills_icon_js{
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #D9B92C;
+}
+#skills .skills_icon_python{
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #2C2C2B;
 }
 #skills .skills_names{
     display: flex;
